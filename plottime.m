@@ -10,4 +10,4 @@ xlabel('N value');
 ylabel('Time consumed (ms)')
 plot(N,T2,'-g*')
 
-legend('Williams'' method ','proposed method',0)
+legend('Williams'' method ','Proposed method',0)
