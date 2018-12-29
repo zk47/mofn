@@ -1,5 +1,5 @@
 # mofn
-  matlab code.
+  matlab code.  
 Method of creating minimal-order Markov set and transition states of m/n sliding window.  
 
 The following functions get from paper "Analysis and Design of Sliding m-of-n Detectors":  
