@@ -27,7 +27,7 @@ end;
 if isempty(Sm{m})==1,
 disp('---- Stand by, calculating structures ----');
 fprintf(' m=%i n=%i ',m,n);
-tic
+tic  % set start time
 % New method create  M/N sliding minimal-order Markov state set
 % 1. Add absorption(accepting) state to the set; Initialize j=0;
 % 2. List all the states h, which satisfying N-M+j bits that exactly contain j
@@ -55,7 +55,14 @@ for j=1:m-1,
     k = nm + j;
     v=nchoosek(1:k, j); % Create combinations of k bits contain j ones.
     [nr,~] = size(v); % Get number of combinations
+    
     for r=1:nr,
+        
+        % Use  '.' printing progress
+        if (S.ns>500)&&(rem(i,round(S.ns/10))==1),
+            fprintf('.'); 
+        end;  
+        
         vh = zeros(1,k);
         b1 = min(v(r,:));          % Get the highest bit 1 posion.(in string)
         h1=k-b1+1; % Caculate the highest bit 1 position, in binary.
@@ -68,7 +75,7 @@ for j=1:m-1,
         i=i+1;
     end
 end
-toc
+toc  % get stop times
 % Sort hexads by H
 [~,isrt]=sort(S.H);
 S.H=S.H(isrt);
