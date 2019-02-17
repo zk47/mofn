@@ -2,10 +2,10 @@
 function S=mofn_setup_opt2(m,n)
 % Author: zhaokang  
 % 2018.12
-% S=mofn_setup_opt(m,n)
+% S=mofn_setup_opt2(m,n)
 % Returns a structure S of states characterizing a sliding m-of-n
-% detector,using a new method,which can direct create the minimal-order
-% Markov set of M/N sliding window.
+% detector,using a new method,which can direct create the minimal-order Markov set of M/N sliding window.
+% 
 % S.ns = number of states 
 % S.H = integer representation of the state 
 % S.Hp = transitioning state upon a success 
@@ -41,6 +41,8 @@ S.P=zeros(1,S.ns);
 S.H=zeros(1,S.ns);
 S.Hp=zeros(1,S.ns);
 S.Hm=zeros(1,S.ns);
+S.Pp=zeros(1,S.ns);
+S.Pm=zeros(1,S.ns);
 % Add the accepting state
 S.H(S.ns)=2^n;
 S.Hp(S.ns)=2^n;

@@ -9,6 +9,8 @@ function S=mofn_setup_opt(m,n)
 % S.Hm = transitioning state upon a failure  ¼ì²âµ½Ê§°ÜºóµÄ×ªÒÆ×´Ì¬
 % S.iHm = index of state in S.Hm
 % S.P = temporary storage for Williams (DSTO-TN-0132) algorithm for Pd
+% S.Pp = William's evaluate method use P+, which indicates the probability of a system in certain states at time ¡°k-1¡±, and these states need to satisfy the following condition: the system happens to change to state S.H  when the result of the next test is ¡®1¡¯; 
+% S.Pm = William's evaluate method use P-, which indicates the probability of a system in certain states at time ¡°k-1¡±, and these states need to satisfy the following condition: the system happens to change to state S.H  when the result of the next test is ¡®0¡¯; 
 % Data are stored in a .mat file so only have to do this once
 fname=['mofn_struct_n' int2str(n)];
 if (exist([fname '.mat'],'file')==2),
@@ -28,6 +30,8 @@ tic
 i=1;
 S.ns=i;
 S.P(i)=0;
+S.Pp(i)=0;
+S.Pm(i)=0;
 S.H(i)=2^n;
 S.Hp(i)=2^n;
 S.Hm(i)=2^n;
@@ -71,4 +75,4 @@ eval(['save ' fname ' Sm']);
 else
 S=Sm{m};
 end;
-[S.H' S.Hm' S.Hp' S.iHm' S.iHp'];
+[S.H' S.Hm' S.Hp' S.iHm' S.iHp' S.Pp' S.Pm']

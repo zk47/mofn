@@ -6,6 +6,8 @@ function S=addhexad_opt(S,h,m,n)
 i=S.ns+1; % Find index for this hexad
 S.ns=i; % Increment number of hexads
 S.P(i)=0;
+S.Pp(i)=0;
+S.Pm(i)=0;
 S.H(i)=h; % Current hexad's integer state represenation
 % If next trial is a failure
 hm=mod(2*h,2^(n-1)); % Integer state
