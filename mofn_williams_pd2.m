@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function [S, Pd, tc]=mofn_williams_pd(pv, k, m,n)
+function [S, Pd, tc]=mofn_williams_pd2(pv, k, m,n)
 % Author: zhaokang  
 % 2019.02
 % 用于生成k时刻进入A状态的概率. 该方法请参考Williams论文的Algorithm 2
@@ -10,7 +10,7 @@ function [S, Pd, tc]=mofn_williams_pd(pv, k, m,n)
 % Pd: is a matrix with length(pv) rows and k columns. 即结果会给出1:k的所有中间的检测概率
 % tc: 相应的消耗时间,不包含S结构的创建时间.
 %
-S=mofn_setup_opt(m,n);  % 这个函数可以替换为mofn_setup_opt(m,n),即来自Abraham的方法
+S=mofn_setup_opt2(m,n);  % 这个函数可以替换为mofn_setup_opt(m,n),即来自Abraham的方法
 np=length(pv);
 Pd = zeros(np, k);  % 初始化nk行，k列
 tc =zeros(np,k); % 初始化消耗时间

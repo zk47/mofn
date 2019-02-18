@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function [S, Pd,tc]=mofn_pd(pv,Kv,m,n)
+function [S, Pd,tc]=mofn_pd2(pv,Kv,m,n)
 % Pd=mofn_pd(pv,Lv,m,n)
 % Returns Pd for set of success probabilities in pv for the time
 % indexes in the vector Lv。
@@ -7,9 +7,9 @@ function [S, Pd,tc]=mofn_pd(pv,Kv,m,n)
 % Output:
 % S: 最小马尔科夫状态结构体
 % Pd: is a matrix with length(pv) rows and length(Kv) columns
-% tc: 相应的消耗时间,不包含S结构的创建时间.
+% tc: 相应的消耗时间
 %
-S=mofn_setup_opt(m,n);  % 这个函数也可以替换为mofn_setup_opt(m,n),即来自Abraham的方法
+S=mofn_setup_opt2(m,n);  % 这个函数也可以替换为mofn_setup_opt(m,n),即来自Abraham的方法
 % Don't do this if there are too many states
 %if S.ns>133010,   % 这个数字是随便给的
 %Pd=nan*ones(size(Lv));

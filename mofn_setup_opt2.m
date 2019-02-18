@@ -78,6 +78,7 @@ for j=1:m-1,
     end
 end
 toc  % get stop times
+S.t=toc;
 % Sort hexads by H
 [~,isrt]=sort(S.H);
 S.H=S.H(isrt);

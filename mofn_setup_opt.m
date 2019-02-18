@@ -55,6 +55,7 @@ S=addhexad_opt(S,hna0,m,n);
 end;
 end;
 toc
+S.t=toc;
 % Sort hexads by H
 [~,isrt]=sort(S.H);
 S.H=S.H(isrt);
