@@ -21,7 +21,7 @@ hold on
 p_10_15_09 = importdata('presult_10_15_0.9.txt');
 plot(p_10_15_09(:,1),p_10_15_09(:,2),'-cp') %10/15 p=0.9
 
-xlabel('X');
+xlabel('scan number');
 ylabel('Probability distribution function F(X)')
 title('M/N(10/15)')
-legend('p=0.4 ','p=0.5','p=0.6','p=0.7','p=0.8','p=0.9',4)
+legend('\alpha=0.4 ','\alpha=0.5','\alpha=0.6','\alpha=0.7','\alpha=0.8','\alpha=0.9',4)

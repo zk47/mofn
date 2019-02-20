@@ -17,7 +17,7 @@ hold on
 p_19_20 = importdata('presult_19_20.txt');
 plot(p_19_20(:,1),p_19_20(:,2),'-kd') %19/20
 
-xlabel('X');
+xlabel('scan number');
 ylabel('Probability distribution function F(X)')
-title('p=0.9, diffrent M')
+title('\alpha=0.9, diffrent M')
 legend('5/20','10/20 ','15/20','18/20','19/20',4)

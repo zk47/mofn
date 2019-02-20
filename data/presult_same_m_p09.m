@@ -17,7 +17,7 @@ hold on
 p_10_20 = importdata('presult_10_20.txt');
 plot(p_10_20(:,1),p_10_20(:,2),'-ms') %10/20
 
-xlabel('X');
+xlabel('scan number');
 ylabel('Probability distribution function F(X)')
-title('p=0.9, diffrent N')
+title('\alpha=0.9, diffrent N')
 legend('10/12 ','10/14','10/15','10/17','10/20',4)
