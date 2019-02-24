@@ -1,7 +1,8 @@
-% plot time consumed。仅比较Williams和Abram
-m = 10
+% plot time consumed。 proposed CMMS + Williams CDP 与 Williams CMMS +
+% Williams CDP比较
+m = 10;
 n=15;
-k=100;
+k=50;
 pv=0.8;
 [S1, Pd1, T1]=mofn_williams_pd(pv, k, m, n);
 delete(sprintf('mofn_struct_n%d.mat', n));
@@ -20,4 +21,4 @@ xlabel('number of scans');
 ylabel('Time consumed (s)')
 plot(1:k,T2,'-g*')
 
-legend('Williams'' method ','Proposed method',0)
+legend('Williams CMMS + Williams CDP','proposed CMMS + Williams CDP',0)

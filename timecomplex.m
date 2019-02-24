@@ -14,4 +14,4 @@ hold on
 xlabel('N value');
 ylabel('time complexity')
 plot(n0,N2,'-g*')
-legend('Williams''  method ','Proposed method (M=N/2)',2)
+legend('Williams CMMS algorithm ','proposed CMMS algorithm (M=N/2)',2)

@@ -1,7 +1,7 @@
-% plot time consumed。仅比较Williams和Abram
-m = 4
-n=6;
-k=100;
+% plot time consumed。Williams CDP algorithm 与 Abraham CDP algorithm 运行时间比较
+m = 10;
+n= 15;
+k=50;
 pv=0.8;
 [S1, Pd1, T1]=mofn_williams_pd2(pv, k, m, n);
 delete(sprintf('mofn_struct_n%d.mat', n));
@@ -15,8 +15,8 @@ plot(1:k,T1,'-r+')
 ts=sprintf('M=%d,N=%d',m,n);
 title(ts)
 hold on
-xlabel('number of scans');
+xlabel('scan number');
 ylabel('Time consumed (s)')
 plot(1:k,T2,'-g*')
 
-legend('Williams'' P method ','Abraham''s P method',0)
+legend('Williams CDP algorithm ','Abraham CDP algorithm',0)
