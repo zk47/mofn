@@ -1,7 +1,7 @@
-% plot time consumed。 proposed CMMS + Williams CDP 与 Williams CMMS +
-% Williams CDP比较
-m = 10;
-n=15;
+% plot time consumed。 proposed CMMS + Williams CAP 与 Williams CMMS +
+% Williams CAP比较
+m = 4;
+n=6;
 k=50;
 pv=0.8;
 [S1, Pd1, T1]=mofn_williams_pd(pv, k, m, n);
@@ -25,5 +25,5 @@ xlabel('scan number');
 ylabel('Time consumed (s)');
 p4=plot(1:k,T2,'-g*');
 
-legend([p1(1),p2(1),p3(1),p4(1)], 'Williams CMMS algorithm', 'proposed CMMS algorithm', 'Williams CMMS + Williams CDP', 'proposed CMMS + Williams CDP');
+legend([p1(1),p2(1),p3(1),p4(1)], 'Williams CMMS algorithm', 'proposed CMMS algorithm', 'Williams CMMS + Williams CAP', 'proposed CMMS + Williams CAP');
 %legend('Williams CMMS algorithm','proposed CMMS algorithm','Williams CMMS + Williams CDP','proposed CMMS + Williams CDP')

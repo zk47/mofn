@@ -1,4 +1,4 @@
-% plot time consumed。Williams CDP algorithm 与 Abraham CDP algorithm 运行时间比较
+% plot time consumed。Williams CAP algorithm 与 Abraham CAP algorithm 运行时间比较
 m = 10;
 n= 15;
 k=50;
@@ -19,4 +19,4 @@ xlabel('scan number');
 ylabel('Time consumed (s)')
 plot(1:k,T2,'-g*')
 
-legend('Williams CDP algorithm ','Abraham CDP algorithm',0)
+legend('Williams CAP algorithm ','Abraham CAP algorithm',0)
