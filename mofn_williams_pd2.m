@@ -12,7 +12,7 @@ function [S, Pd, tc]=mofn_williams_pd2(pv, k, m,n)
 %
 S=mofn_setup_opt2(m,n);  % 这个函数可以替换为mofn_setup_opt(m,n),即来自Abraham的方法
 np=length(pv);
-Pd = zeros(np, k);  % 初始化nk行，k列
+Pd = zeros(np, k);  % 初始化np行，k列
 tc =zeros(np,k); % 初始化消耗时间
 for r = 1:np
     tic;
