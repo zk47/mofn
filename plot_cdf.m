@@ -24,8 +24,8 @@ axis([0 k,0,1]);
 hold on
 plot(1:k,Pd(5,:),'-cp') %3/7 p=0.9
 axis([0 k,0,1]);
-xlabel(' interrogation cycles');
-ylabel('CDF');
+xlabel('T (interrogation cycles)');
+ylabel('CDF F(T)');
 tit = sprintf('M/N(%d/%d)',m,n);
 title(tit);
 legend('p=0.5','p=0.6','p=0.7','p=0.8','p=0.9',4)
